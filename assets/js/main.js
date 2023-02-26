@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
    * Mobile nav toggle
    */
 
+  
+
+
+
+
   const mobileNavShow = document.querySelector('.mobile-nav-show');
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
 
@@ -156,6 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const nav  = document.querySelector('.nav');
+  window.addEventListener('scroll'  , function(){
+    nav.classList.toggle('active', window.scrollY > 0)
+  })
   /**
    * Init swiper slider with 2 slides at once in desktop view
    */
@@ -209,4 +218,5 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
+  
 });

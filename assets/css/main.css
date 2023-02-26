@@ -18,9 +18,9 @@
 
 /* Colors */
 :root {
-  --color-default: #364d59;
-  --color-primary: #feb900;
-  --color-secondary: #52565e;
+  --color-default: #14140F;
+  --color-primary: #BD2A2E;
+  --color-secondary: #14140F;
 }
 
 /* Smooth scroll behavior */
@@ -135,6 +135,7 @@ section {
   margin: 0 auto 0 auto;
 }
 
+
 @media (min-width: 1199px) {
   .section-header p {
     max-width: 60%;
@@ -222,7 +223,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: #ffc732;
+  background: #BD2A2E;
   color: #fff;
 }
 
@@ -291,11 +292,12 @@ section {
 --------------------------------------------------------------*/
 .header {
   z-index: 997;
-  position: absolute;
+  position: fixed;
   padding: 30px 0;
   top: 0;
   left: 0;
   right: 0;
+  transition: 0.4;
 }
 
 .header .logo img {
@@ -315,6 +317,10 @@ section {
   color: var(--color-primary);
 }
 
+.nav.active{
+  background-color: #14140F;
+  transition: 0.9s;
+}
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
@@ -702,7 +708,7 @@ section {
 }
 
 .get-started .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
+  background: #14140F;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1700,12 +1706,12 @@ section {
   line-height: 0;
   color: var(--color-primary);
   border-radius: 50%;
-  border: 2px dotted #ffd565;
+  border: var(--color-primary);
 }
 
 .contact .info-item h3 {
   font-size: 20px;
-  color: #6c757d;
+  color: var(--color-secondary);
   font-weight: 700;
   margin: 10px 0;
 }
@@ -1800,7 +1806,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
+  background: #14140F(254, 185, 0, 0.8);
 }
 
 @keyframes animate-loading {
